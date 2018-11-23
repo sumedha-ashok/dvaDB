@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
 
     ProductCluster.associate = function (models) {
         models.ProductCluster.belongsTo(models.Product, { foreignKey: 'productId' });
+
         models.ProductCluster.belongsTo(models.Cluster, { foreignKey: 'clusterId' });
     };
 
